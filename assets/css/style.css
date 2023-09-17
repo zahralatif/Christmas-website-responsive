@@ -91,7 +91,7 @@ button {
 }
 
 .section {
-  padding: 4.5rem 0 1rem;
+  padding: 4.5rem 1rem;
 }
 
 .section__title {
@@ -286,7 +286,7 @@ button {
 
 .gift__container {
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .gift__card {
@@ -374,7 +374,6 @@ button {
   right: 0;
   bottom: 0;
 }
-
 
 .new__icon {
   font-size: 1.25rem;
@@ -495,13 +494,45 @@ button {
   color: var(--text-color-light);
 }
 
-@media screen and (min-width: 968px) {
-
-  .container,
-  .footer__container {
-    margin-left: 9.75rem;
-    margin-right: 9.75rem;
+@media screen and (min-width: 320px) and (max-width:400px) {
+  .home__container {
+    margin-left: .5rem;
+    margin-right: .5rem;
   }
+
+  .giving__container,
+  .gift__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gift__card {
+    margin: auto 3rem;
+  }
+}
+
+@media screen and (min-width:576px) {
+  .home__container {
+    padding: 0 7rem;
+  }
+
+  .giving__container,
+  .celebrate__description,
+  .gift__container {
+    padding: 0 5rem;
+  }
+
+  .message__input,
+  .message__button {
+    width: 60%;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width:769px) {
 
   .nav {
     gap: 3rem;
@@ -522,10 +553,6 @@ button {
     gap: 3rem;
   }
 
-  .section {
-    padding-top: 7rem;
-  }
-
   .home__container {
     padding-top: 4rem;
   }
@@ -539,26 +566,67 @@ button {
     align-items: center;
   }
 
-  .celebrate__container {
-    display: flex;
-    padding: 3.25rem;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5.5rem;
-  }
-
   .gift__container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 3.5rem;
   }
 
   .new__container {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 3rem;
+  }
+
+  .message__img {
+    width: 250px;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__images--img2 {
+    right: -5%;
+  }
+}
+
+@media screen and (min-width: 980px) {
+
+  .nav {
+    margin-left: 9.5rem;
+    margin-right: 9.5rem;
+  }
+
+  .section {
+    padding-top: 5rem;
+  }
+
+  .celebrate__container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .celebrate__description {
+    padding: 0 10rem;
+  }
+
+  .message__container {
+    margin: 5rem;
+    padding: 5rem 0;
+    gap: 0;
+  }
+
+  .message__img {
+    width: 350px;
+    padding: 2rem;
+  }
+
+  .footer {
+    padding-bottom: 0;
   }
 
   .footer__container {
@@ -573,6 +641,6 @@ button {
 
   .footer__images--img2 {
     top: 45%;
-    right: -8%;
+    right: -5%;
   }
 }
